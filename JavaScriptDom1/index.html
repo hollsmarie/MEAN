@@ -1,0 +1,23 @@
+<html>
+<body>
+    <h1>Students</h1>
+    <ul id="main">
+        <!-- this is empty-->
+    </ul> 
+        <script>
+        
+        let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+            
+            for(var student in students)
+            {
+            let new_student = document.createElement("li");
+            new_student.innerHTML = students[student];
+            document.getElementById("main").appendChild(new_student);
+            }
+            
+        </script>   
+</body>
+</html>
+
+
+
