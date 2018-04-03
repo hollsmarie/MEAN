@@ -1,0 +1,57 @@
+<html>
+
+<body>
+    <h1>JS Objects Assignment</h1>
+    <script>
+        let students = [
+            { name: 'Remy', cohort: 'Jan' },
+            { name: 'Genevieve', cohort: 'March' },
+            { name: 'Chuck', cohort: 'Jan' },
+            { name: 'Osmund', cohort: 'June' },
+            { name: 'Nikki', cohort: 'June' },
+            { name: 'Boris', cohort: 'June' }
+        ];
+
+        for (student of students) { // loops through each object of the array
+            var string = ""; // creates a variable containing an empty string 
+            for (key in student) { // loops through each object's key value
+                string += key + ": " + student[key] //adds the key of the object (name) to the empty string AND adds the object key value (the name string)
+                if (key == 'name') { //if statement saying if the key is a string equal to 'name' then do whats on the following line
+                    string += ", " //add a comma and space to the string after the key string equal to name
+                } //closes if statement
+            } //stops looping through object's key values
+            console.log(string); //prints the string to the console
+        } //ends the initial for loop
+
+        let users = {
+            employees: [
+                { 'first_name': 'Miguel', 'last_name': 'Jones' },
+                { 'first_name': 'Ernie', 'last_name': 'Bertson' },
+                { 'first_name': 'Nora', 'last_name': 'Lu' },
+                { 'first_name': 'Sally', 'last_name': 'Barkyoumb' }
+            ],
+            managers: [
+                { 'first_name': 'Lillian', 'last_name': 'Chambers' },
+                { 'first_name': 'Gordon', 'last_name': 'Poe' }
+            ]
+        };
+        for (position in users) { // loops through the two arrays in the User's object
+            console.log(position.toUpperCase()) //prints the variable name of each array
+            var count = 1; // sets a count variable that is equal to one. This will be the variable that holds each position's number
+            for(var user of users[position]){ // loops through each object in each array of our main object users
+                var string = count + " - "; // creates a variable string, and sets it equal to the value of count variable and appends a dash
+                string += user['last_name'].toUpperCase() + ", " // adds the user's last name of the index we're on in our for loop, makes it uppercase, and concatenates the string with a comma
+                string += user['first_name'].toUpperCase() + " - " // adds the user's first name of the index we're on in our for loop, makes it uppercase, and concatenates the string with a dash
+                var chars = user['first_name'].length + user['last_name'].length; // creayes an empty variable called chars(characters) sets it equal to the length of each user's first name and their last name
+                string += chars; // adds the value in chars to the end of the string
+                console.log(string) // logs the final string
+                count++; //increases next position
+            } // closes our for loop of each object in the arrays within our object
+        } //closes our for loop of each array in the object
+
+
+
+    </script>
+</body>
+
+</html>

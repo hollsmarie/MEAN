@@ -33,18 +33,18 @@
 			// inner loop
 			for(let j = 0; j<13; j++){
 				// calculate our number
-                var nums = 0;
-                if(i === 0 && j === 0)
+                var nums = 0; // create variable nums and set it to 0
+                if(i === 0 && j === 0) // if i and j are both 0, set nums to be x
                 {
                     nums = "x";
                 }   
-                else if (i === 0){
+                else if (i === 0){ //if i is 0, run the j for loop and set nums to be j, inserting into the table row
                     nums = j;
                  } 
-                 else if(j === 0){
+                 else if(j === 0){ //if j is 0, run the i for loop and set nums to be i, inserting into the table row
                      nums = i;
                  }
-                 else{
+                 else{ //fill the remaining rows with the product of i * j
                      nums = (i) * (j);
                  }
 				// attach our table data tags around the number
