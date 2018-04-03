@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+    <script>
+
+        function NinjaCreator (name) {
+            this.name = name;
+            this.health = 100;
+            const speed = 3;
+            const strength = 3;
+            
+            this.drinkSake = function(){
+                this.health += 10;
+            }
+            this.sayName = function(){
+                console.log(this.name)
+            }
+            this.showStats = function(){
+                console.log(strength);
+                console.log(speed);
+                console.log(this.health);
+            }
+        }
+
+
+holly = new NinjaCreator("holly");
+holly.sayName();
+holly.showStats();
+holly.drinkSake();
+
+    </script>
+</body>
+
+</html>
