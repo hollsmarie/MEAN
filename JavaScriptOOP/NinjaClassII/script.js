@@ -2,8 +2,8 @@
         function NinjaCreator (name) {
             this.name = name;
             this.health = 100;
-            const speed = 3;
-            const strength = 3;
+            this.speed = 3;
+            this.strength = 3;
             
             this.drinkSake = function(){
                 this.health += 10;
@@ -12,8 +12,8 @@
                 console.log(this.name)
             }
             this.showStats = function(){
-                console.log(strength);
-                console.log(speed);
+                console.log(this.strength);
+                console.log(this.speed);
                 console.log(this.health);
             }
         }
