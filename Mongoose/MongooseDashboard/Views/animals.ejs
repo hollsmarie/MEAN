@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MongooseDashboard</title>
+</head>
+
+<body>
+
+        <h3>Add an animal</h3>
+        <form action='/addanimal' method='post'>
+            Animal Name:
+            <input type='text' name='name'> Animal Color:
+            <input type='text' name='color'>
+            <input type='submit' value='Add this Animal'>
+        </form>
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+             <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+
+</body>
+
+</html>

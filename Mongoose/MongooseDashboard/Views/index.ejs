@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MongooseDashboard</title>
+</head>
+
+<body>
+    <h1>Animals!</h1>
+    <% for(var x in animals){ %>
+        <h5> <%= animals[x].name %> </h5>
+        <a href="show/<%=animals[x]._id%>">Check me out!</a>
+        <p>___________________________________________________</p>
+    <% } %>
+        
+
+
+    <a href="/animals">Add a new Animal</a>
+
+
+</body>
+
+</html>
