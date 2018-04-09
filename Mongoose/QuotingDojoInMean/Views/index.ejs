@@ -1,0 +1,22 @@
+
+<html>
+    <head>
+       <title>Quoting Dojo</title>
+    </head>
+    <body>
+      <h1>Welcome to Quoting Dojo</h1>
+     
+      <form action='/quotes' method='post'>
+        Your Name: <input type='text' name='name'>
+          
+        <p>Your Quote:</p><textarea name='quote'></textarea>
+          <input type='submit' value='Add My Quote'>
+      </form>
+      <a href="/quotespage">Skip to Quotes</a>
+      <% if(typeof(errors) != 'undefined' ) { %>
+        <% for (var x in errors) { %>
+         <h3><%= errors[x].message %></h3>
+        <% } %>
+    <% } %>
+    </body>
+</html>

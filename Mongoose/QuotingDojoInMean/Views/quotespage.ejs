@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quoting Dojo</title>
+</head>
+
+<body>
+    <h1>Here are the awesome quotes!</h1>
+
+    <% if(quotes){ %>
+
+        <% for(let i=0; i<quotes.length; i++) {%>
+            <div>
+                <p>Quote:
+                    <%=quotes[i].quote%>
+                </p>
+                <p>Author:
+                    <%=quotes[i].name%>
+                </p>
+                <br>
+            </div>
+            <%}%>
+                <%}%>
+
+                    <a href="/">Return to index</a>
+
+
+
+</body>
+
+</html>
