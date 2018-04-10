@@ -78,18 +78,18 @@ app.post('/update/:id', function (req, res) {
     Animal.update({_id: req.params.id },
         {
             name: req.body.name,
-            color: rec.body.color,
+            color: req.body.color,
         },
         function(err) {
             if(err) 
                 {
-                    res.render('/edit/${req.params.id}', {errors: animal.errors})
+                    res.render('/', {errors: animal.errors})
                 }
             else
                 {
                     res.redirect('/')
                 }
-    })
+    });
 })
 
 
