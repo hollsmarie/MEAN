@@ -1,0 +1,23 @@
+.form {
+    padding: 50px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#Container {
+width: 100%;
+}
+
+.Loginform{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+
+.Registerform{
+    width: 25%;
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+}
