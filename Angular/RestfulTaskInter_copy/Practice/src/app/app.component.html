@@ -1,0 +1,57 @@
+<div id="Body">
+  <div style="text-align:center">
+
+    <h1>Restful Tasks Continued:</h1>
+    <h1>TASKS!</h1>
+
+  </div>
+  <h2>Here are some tasks to get your day started: </h2>
+
+  <h2>Add a new Task:</h2>
+  <form (submit)="createTask()">
+    <!-- use the json pipe to see how newTask changes in real time -->
+    <p> {{ newTask | json }} </p>
+    <input type="text" name="newTask.title" [(ngModel)]="newTask.title" />
+    <input type="text" name="newTask.description" [(ngModel)]="newTask.description" />
+    <input type="submit" value="Create Task" />
+  </form>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th> Title </th>
+        <th> Description </th>
+        <th> Actions </th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr  *ngFor="let task of tasks"> 
+        <td>{{task["title"]}}</td>
+        <td> {{task.description}}</td>
+        <td>
+            <button (click)="getTaskById(task._id)">Details</button>
+            <button (click)="updates=task">Update</button>
+            <button (click)="delete(task._id)">Delete</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+        <h2 style="text-align:center">Edit Task</h2>
+      <form (submit)="taskUpdate(updates._id)">
+        <p>{{updates | json}}</p>
+        <!--this line allows real time tracking of changes to newTask-->
+        <label>Title:</label>
+        <input type="text" name="updates.title" [(ngModel)]="updates.title" />
+        <label>Description:</label>
+        <input type="text" name="updates.description" [(ngModel)]="updates.description" />
+        <input type="submit" value="update and save">
+      </form>
+ 
+
+
