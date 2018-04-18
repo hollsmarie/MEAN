@@ -3,8 +3,18 @@
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}"> <span class="badge"> {{hero.id}} </span>{{hero.name}}</a>
     <!-- li is the host element; hero is the list from the heroes component class; hero holds the current hero object for each iteration through the list-->
-   
+    <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
   </li>
 </ul>
+<div>
+  <label> Hero name: 
+    <input #heroName/>
+  </label>
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+
+
+</div>
 
 <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> Angular property binding -->
